@@ -1,0 +1,2 @@
+<dt><a href="{url|s}">{name|s}</a>: ${price|nicePrice|s}</dt>
+<dd><p>{description|s}</p></dd>

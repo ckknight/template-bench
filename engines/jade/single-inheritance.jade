@@ -1,0 +1,14 @@
+extends inheritance-layout
+
+block body
+  h1!= text
+  - if (items.length)
+    dl#items
+      - each item in items
+        dt
+          a(href!=item.url)!= item.name
+          | : $!{item.price.toFixed(2)}
+        dd
+          p!= item.description
+  - else
+    p#no-items There are no items at this time.

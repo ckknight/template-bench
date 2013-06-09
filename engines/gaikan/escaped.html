@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>#{data.title}</title>
+	</head>
+	<body>
+		<h1>#{data.text}</h1>
+    <ins data-if="data.items.length">
+      <dl id="items">
+        <ins data-for="data.items">
+          <dt><a href="#{data.url}">#{data.name}</a>: $#{data.price.toFixed(2)}</dt>
+          <dd><p>#{data.description}</p></dd>
+        </ins>
+      </dl>
+    </ins>
+    <ins data-if="!data.items.length">
+      <p id="no-items">There are no items at this time.</p>
+    </ins>
+	</body>
+</html>

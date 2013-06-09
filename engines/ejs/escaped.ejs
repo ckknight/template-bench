@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title><%= title %></title>
+	</head>
+	<body>
+		<h1><%= text %></h1>
+    <% if (items.length) { %>
+      <dl id="items">
+        <% for (var i = 0, len = items.length; i < len; ++i) {
+             var item = items[i]; %>
+          <dt><a href="<%= item.url %>"><%= item.name %></a>: $<%= item.price.toFixed(2) %></dt>
+          <dd><p><%= item.description %></p></dd>
+    		<% } %>
+      </dl>
+    <% } else { %>
+      <p id="no-items">There are no items at this time.</p>
+    <% } %>
+	</body>
+</html>

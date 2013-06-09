@@ -1,0 +1,14 @@
+<% extend 'multi-inheritance-sublayout.ect' %>
+
+<% block 'content': %>
+  <% if @items.length: %>
+    <dl id="items">
+      <% for item in @items: %>
+        <dt><a href="<%- item.url %>"><%- item.name %></a>: $<%- item.price.toFixed(2) %></dt>
+        <dd><p><%- item.description %></p></dd>
+  		<% end %>
+    </dl>
+  <% else: %>
+    <p id="no-items">There are no items at this time.</p>
+  <% end %>
+<% end %>

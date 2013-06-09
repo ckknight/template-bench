@@ -1,0 +1,5 @@
+dt
+  a(href!=item.url)!= item.name
+  | : $!{item.price.toFixed(2)}
+dd
+  p!= item.description

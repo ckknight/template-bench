@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="item">
+  <dt>
+  	<a>
+  		<fest:attributes>
+  			<fest:attribute name="href"><fest:value output="text">item.url</fest:value></fest:attribute>
+  		</fest:attributes>
+  		<fest:value output="text">item.name</fest:value>
+  	</a>: $<fest:value output="text">item.price.toFixed(2)</fest:value>
+  </dt>
+  <dd><p><fest:value output="text">item.description</fest:value></p></dd>
+</fest:template>

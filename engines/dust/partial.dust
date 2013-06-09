@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>{title|s}</title>
+	</head>
+	<body>
+		<h1>{text|s}</h1>
+		{?items}
+      <dl id="items">
+        {#items}
+          {>"_item"/}
+        {/items}
+      </dl>
+		{:else}
+      <p id="no-items">There are no items at this time.</p>
+		{/items}
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title><%=h title %></title>
+	</head>
+	<body>
+		<h1><%=h text %></h1>
+    <% if items.length: %>
+      <dl id="items">
+        <% for item in items: %>
+          <dt><a href="<%=h item.url %>"><%=h item.name %></a>: $<%=h item.price.to-fixed(2) %></dt>
+          <dd><p><%=h item.description %></p></dd>
+    		<% end %>
+      </dl>
+    <% else: %>
+      <p id="no-items">There are no items at this time.</p>
+    <% end %>
+	</body>
+</html>

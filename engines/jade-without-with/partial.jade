@@ -1,0 +1,12 @@
+doctype 5
+html(lang="en-us")
+  head
+    title!= self.title
+  body
+    h1!= self.text
+    - if (self.items.length)
+      dl#items
+        - each item in self.items
+          include _item
+    - else
+      p#no-items There are no items at this time.

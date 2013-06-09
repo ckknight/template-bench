@@ -1,0 +1,4 @@
+{{##def.itemPartial:item:
+	<dt><a href="{{=item.url}}">{{=item.name}}</a>: ${{=item.price.toFixed(2)}}</dt>
+  <dd><p>{{=item.description}}</p></dd>
+#}}

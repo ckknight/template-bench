@@ -1,0 +1,14 @@
+{>"inheritance-layout"/}
+{<body}
+	<h1>{text|s}</h1>
+	{?items}
+    <dl id="items">
+      {#items}
+        <dt><a href="{url|s}">{name|s}</a>: ${price|nicePrice|s}</dt>
+        <dd><p>{description|s}</p></dd>
+      {/items}
+    </dl>
+	{:else}
+    <p id="no-items">There are no items at this time.</p>
+	{/items}
+{/body}

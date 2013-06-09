@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title><%=h title %></title>
+	</head>
+	<body>
+    <% block body %>
+	</body>
+</html>

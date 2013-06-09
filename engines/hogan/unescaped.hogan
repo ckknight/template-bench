@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>{{{title}}}</title>
+	</head>
+	<body>
+		<h1>{{{text}}}</h1>
+    {{#items.length}}
+      <dl id="items">
+        {{#items}}
+          <dt><a href="{{url}}">{{{name}}}</a>: ${{{price.toFixed(2)}}}</dt>
+          <dd><p>{{{description}}}</p></dd>
+        {{/items}}
+      </dl>
+    {{/items.length}}
+    {{^items}}
+      <p id="no-items">There are no items at this time.</p>
+    {{/items}}
+	</body>
+</html>

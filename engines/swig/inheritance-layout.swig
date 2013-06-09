@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>{{ title|raw }}</title>
+	</head>
+	<body>
+    {% block body %}
+    {% endblock %}
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+  <fest:doctype>html</fest:doctype>
+	<html lang="en-us">
+		<head>
+			<title><fest:value output="text">json.title</fest:value></title>
+		</head>
+		<body>
+			<h1><fest:value output="text">json.text</fest:value></h1>
+			<fest:if test="json.items.length">
+        <dl id="items">
+  				<fest:for iterate="json.items" index="i">
+            <fest:include src="_item.fest" context="json.items[i]" />
+  				</fest:for>
+        </dl>
+			</fest:if>
+			<fest:if test="!json.items.length">
+				<p id="no-items">There are no items at this time.</p>
+			</fest:if>
+		</body>
+	</html>
+</fest:template>

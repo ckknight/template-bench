@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title><%- title %></title>
+	</head>
+	<body>
+		<h1><%- text %></h1>
+    <% if (items.length) { %>
+      <dl id="items">
+        <% for (var i = 0, len = items.length; i < len; ++i) {
+             var item = items[i]; %>
+          <% include _item %>
+    		<% } %>
+      </dl>
+    <% } else { %>
+      <p id="no-items">There are no items at this time.</p>
+    <% } %>
+	</body>
+</html>

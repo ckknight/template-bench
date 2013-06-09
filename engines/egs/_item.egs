@@ -1,0 +1,2 @@
+<dt><a href="<%=h item.url %>"><%=h item.name %></a>: $<%=h item.price.to-fixed(2) %></dt>
+<dd><p><%=h item.description %></p></dd>

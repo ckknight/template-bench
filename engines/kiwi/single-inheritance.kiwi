@@ -1,0 +1,14 @@
+{{extend "inheritance-layout"}}
+{{block body}}
+	<h1>${text|raw}</h1>
+  {{if items.length}}
+    <dl id="items">
+      {{each items}}
+        <dt><a href="${$value.url|raw}">${$value.name|raw}</a>: $${$value.price.toFixed(2)|raw}</dt>
+        <dd><p>${$value.description|raw}</p></dd>
+      {{/each}}
+    </dl>
+  {{else}}
+    <p id="no-items">There are no items at this time.</p>
+  {{/if}}
+{{/block}}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>{{ it.title|e }}</title>
+	</head>
+	<body>
+		<h1>{{ it.text|e }}</h1>
+    {% if (it.items.length) { %}
+      <dl id="items">
+        {% for (var i = 0, items = it.items, len = items.length; i < len; ++i) { var item = items[i]; %}
+          <dt><a href="{{ item.url|e }}">{{ item.name|e }}</a>: ${{ item.price.toFixed(2)|e }}</dt>
+          <dd><p>{{ item.description|e }}</p></dd>
+    		{% } %}
+      </dl>
+    {% } else { %}
+      <p id="no-items">There are no items at this time.</p>
+    {% } %}
+	</body>
+</html>

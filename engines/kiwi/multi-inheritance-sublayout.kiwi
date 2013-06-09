@@ -1,0 +1,5 @@
+{{extend "inheritance-layout"}}
+{{block body}}
+	<h1>${text|raw}</h1>
+  {{block content}}{{/block}}
+{{/block}}

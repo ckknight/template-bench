@@ -1,0 +1,5 @@
+{>"inheritance-layout"/}
+{<body}
+	<h1>{text|s}</h1>
+  {+content/}
+{/body}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>{title}</title>
+	</head>
+	<body>
+		<h1>{text}</h1>
+		{?items}
+      <dl id="items">
+        {#items}
+          <dt><a href="{url}">{name}</a>: ${price|nicePrice}</dt>
+          <dd><p>{description}</p></dd>
+        {/items}
+      </dl>
+		{:else}
+      <p id="no-items">There are no items at this time.</p>
+		{/items}
+	</body>
+</html>

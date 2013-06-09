@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+  <fest:doctype>html</fest:doctype>
+	<html lang="en-us">
+		<head>
+			<title><fest:value output="text">json.title</fest:value></title>
+		</head>
+		<body>
+			<h1><fest:value output="text">json.text</fest:value></h1>
+			<fest:if test="json.items.length">
+        <dl id="items">
+  				<fest:for iterate="json.items" index="i">
+            <dt>
+    					<a>
+    						<fest:attributes>
+    							<fest:attribute name="href"><fest:value output="text">json.items[i].url</fest:value></fest:attribute>
+    						</fest:attributes>
+    						<fest:value output="text">json.items[i].name</fest:value>
+    					</a>: $<fest:value output="text">json.items[i].price.toFixed(2)</fest:value>
+            </dt>
+            <dd><p><fest:value output="text">json.items[i].description</fest:value></p></dd>
+  				</fest:for>
+        </dl>
+			</fest:if>
+			<fest:if test="!json.items.length">
+				<p id="no-items">There are no items at this time.</p>
+			</fest:if>
+		</body>
+	</html>
+</fest:template>

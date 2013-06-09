@@ -1,0 +1,2 @@
+<dt><a href="${$value.url|raw}">${$value.name|raw}</a>: $${$value.price.toFixed(2)|raw}</dt>
+<dd><p>${$value.description|raw}</p></dd>

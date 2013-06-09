@@ -1,0 +1,13 @@
+extends multi-inheritance-sublayout
+
+block content
+  - if (self.items.length)
+    dl#items
+      - each item in self.items
+        dt
+          a(href!=item.url)!= item.name
+          | : $!{item.price.toFixed(2)}
+        dd
+          p!= item.description
+  - else
+    p#no-items There are no items at this time.
